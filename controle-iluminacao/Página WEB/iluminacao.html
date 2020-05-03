@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ilumina&ccedil;&atilde;o- LAP</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1><img src="logo_lap.jpg" alt="Logo LAP" width="240" height="122"></h1>
+    <h2>Controle de ilumina&ccedil;&atilde;o</h2>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img src="lamp.png" alt="Lampada" style="float:middle;width:75px;height:75px;">
+    </p>
+
+    <form name="controle" id="controle" method="post" action="action.php">
+      ID:
+      <br>
+      <input name="id" id="id" type="number" min="1" max="3" maxlength="3" required name=id/> &nbsp;&nbsp;<font color="FF0000" size="2">*</font>
+      <br><br>
+      Status:
+      <br><br>
+      <input type="radio" name="status" value="1" checked> Ligado
+      <br>
+      <input type="radio" name="status" value="0"> Desligado
+      <br>&nbsp;<br/>
+      Controle:
+      <br><br>
+      Frio&nbsp;&nbsp;<input name="pot" type="range" min="0" max="255" value="127.5" class="slider" id="pot"/>&nbsp;&nbsp;Quente&nbsp;&nbsp;<font color="FF0000" size="2">&nbsp;*</font><br><br><br>
+      <input name="atualizar" type="submit" id="atualizar" value="Atualizar" onclick="return validar()"/> &nbsp;&nbsp;
+      <input name="limpar" type="reset" id="limpar" value="Limpar"/>
+      <br><br>
+      <font color="FF0000" size="2">Campos com * s&atilde;o obrigat&oacute;rios</font>
+    </form>
+
+  </body>
+</html>
